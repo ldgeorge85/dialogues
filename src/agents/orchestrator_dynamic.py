@@ -43,7 +43,7 @@ class OrchestratorAgent:
 
     def run(self, prompt: str, max_parallel: int = 1):
         """
-        Run a single round of multi-agent debate: Opening Statement, Rebuttal, Judging.
+        Run a single round of multi-agent debate: Opening Statement, Rebuttal, Summarization, Judging.
         Args:
             prompt (str): The philosophical prompt to debate
             max_parallel (int): Maximum number of parallel API calls (default: 1)
@@ -51,17 +51,39 @@ class OrchestratorAgent:
         import json
         import os
         from collections import defaultdict
+        import concurrent.futures
+
+        # --- Per-phase parallelism settings ---
+        def get_phase_parallel(phase: str, default: int = 1) -> int:
+            env_map = {
+                "opening": "PARALLEL_AGENTS_OPENING",
+                "rebuttal": "PARALLEL_AGENTS_REBUTTAL",
+                "summary": "PARALLEL_AGENTS_SUMMARY",
+                "judging": "PARALLEL_AGENTS_JUDGING",
+            }
+            # Try phase-specific env var, then global, then default
+            val = os.environ.get(env_map.get(phase, ""))
+            if val is not None:
+                try:
+                    return int(val)
+                except ValueError:
+                    pass
+            val = os.environ.get("PARALLEL_AGENTS")
+            if val is not None:
+                try:
+                    return int(val)
+                except ValueError:
+                    pass
+            return default
 
         transcript = []
         opening_statements = []
         rebuttals = defaultdict(list)
         agent_summaries = {}
 
-        import concurrent.futures
-
-        # --- Opening Statement Phase (parallelized) ---
         # Track token usage
         token_usage = {"opening": [], "rebuttal": [], "summary": [], "judge": []}
+
 
         def get_opening(agent):
             from .llm_utils import call_openai
@@ -77,8 +99,9 @@ class OrchestratorAgent:
                 print(f"  [Tokens: prompt={usage.get('prompt_tokens', 0)}, completion={usage.get('completion_tokens', 0)}, total={usage.get('total_tokens', 0)}]")
             return (agent, response, {"phase": "opening", "agent": agent.name, "text": response})
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=max_parallel) as executor:
-            opening_results = list(executor.map(get_opening, self.agents))
+        with concurrent.futures.ThreadPoolExecutor(max_workers=get_phase_parallel("opening", max_parallel)) as executor:
+            opening_results = list(executor.map(get_opening, self.agents)) # Opening statements phase parallelism
+
         opening_statements = [(agent, response) for agent, response, _ in opening_results]
         transcript.extend([log for _, _, log in opening_results])
 
@@ -104,8 +127,9 @@ class OrchestratorAgent:
                     rebuttal_logs.append({"phase": "rebuttal", "agent": agent.name, "target": other_agent.name, "text": rebuttal})
             return agent.name, rebuttal_list, rebuttal_logs
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=max_parallel) as executor:
-            rebuttal_results = list(executor.map(get_rebuttals, opening_statements))
+        with concurrent.futures.ThreadPoolExecutor(max_workers=get_phase_parallel("rebuttal", max_parallel)) as executor:
+            rebuttal_results = list(executor.map(get_rebuttals, opening_statements)) # Rebuttal phase parallelism
+
         rebuttals = {name: rebuttal_list for name, rebuttal_list, _ in rebuttal_results}
         for _, _, logs in rebuttal_results:
             transcript.extend(logs)
@@ -138,8 +162,9 @@ class OrchestratorAgent:
                 print(f"  [Tokens: prompt={usage.get('prompt_tokens', 0)}, completion={usage.get('completion_tokens', 0)}, total={usage.get('total_tokens', 0)}]")
             return agent.name, summary, {"phase": "summary", "agent": agent.name, "text": summary, "token_usage": usage}
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=max_parallel) as executor:
-            summary_results = list(executor.map(get_summary, opening_statements))
+        with concurrent.futures.ThreadPoolExecutor(max_workers=get_phase_parallel("summary", max_parallel)) as executor:
+            summary_results = list(executor.map(get_summary, opening_statements)) # Summary phase parallelism
+
         agent_summaries = {name: summary for name, summary, _ in summary_results}
         transcript.extend([log for _, _, log in summary_results])
 
@@ -167,8 +192,9 @@ class OrchestratorAgent:
                 print(f"  [Tokens: prompt={usage.get('prompt_tokens', 0)}, completion={usage.get('completion_tokens', 0)}, total={usage.get('total_tokens', 0)}]")
             return judge.name, result, usage
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=max_parallel) as executor:
-            judge_results = list(executor.map(get_judge_result, self.judges))
+        with concurrent.futures.ThreadPoolExecutor(max_workers=get_phase_parallel("judging", max_parallel)) as executor:
+            judge_results = list(executor.map(get_judge_result, self.judges)) # Judging phase parallelism
+
         for judge_name, result, usage in judge_results:
             # Parse and display each rank
             for i, rank_key in enumerate(['rank1', 'rank2', 'rank3']):

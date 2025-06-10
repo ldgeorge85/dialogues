@@ -53,6 +53,16 @@ This document provides a structured, updatable breakdown of all major tasks and 
 - **References:** `docs/persistent_memory.md`, `src/memory/memory_manager.py`
 
 ### 2. Judging Phase & Quorum Logic [In Progress]
+
+#### [2025-06] Per-Phase Parallelism Control
+- **Description:** The system now supports configuring the maximum number of parallel prompts separately for each debate phase (opening, rebuttal, summary, judging).
+- **How to Configure:**
+  - Set environment variables `PARALLEL_AGENTS_OPENING`, `PARALLEL_AGENTS_REBUTTAL`, `PARALLEL_AGENTS_SUMMARY`, `PARALLEL_AGENTS_JUDGING` to control parallelism for each phase.
+  - If a phase-specific variable is not set, the global `PARALLEL_AGENTS` is used as fallback.
+  - Example: To limit summary phase parallelism (due to LLM provider context/KV cache constraints), set `PARALLEL_AGENTS_SUMMARY=1`.
+- **Motivation:** This prevents LLM context overflow when running multiple large prompts (such as summaries or judging) in parallel, while still allowing parallelism for smaller prompts.
+- **References:** See orchestrator_dynamic.py for details.
+
 - **Description:** Implement agent self-summaries, judge agents with distinct judging styles, and quorum logic for winner selection.
 - **Acceptance Criteria:**
   - Each agent generates a summary of its opening statement and rebuttals.

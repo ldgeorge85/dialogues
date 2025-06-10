@@ -80,8 +80,14 @@ dialogues/
 │   │   ├── __init__.py        # Package initializer
 │   │   ├── manager.py         # Debate flow management
 │   │   └── analyzer.py        # Prompt analysis functionality
-│   ├── config/                # Configuration
+│   ├── config/                # System Configuration
 │   │   └── __init__.py        # Package initializer
+│   │   ### Per-Phase Parallelism (2025-06)
+│   │   - You can now set the maximum number of parallel prompts for each debate phase via environment variables:
+│   │     - `PARALLEL_AGENTS_OPENING`, `PARALLEL_AGENTS_REBUTTAL`, `PARALLEL_AGENTS_SUMMARY`, `PARALLEL_AGENTS_JUDGING`
+│   │   - If a phase-specific variable is unset, the system uses the value of `PARALLEL_AGENTS` as fallback.
+│   │   - This is essential for LLM providers with limited context/KV cache: use a lower value for summary/judging phases to avoid overflow, while keeping higher parallelism for opening/rebuttal.
+│   │   - See `src/agents/orchestrator_dynamic.py` for implementation details.
 │   ├── ui/                    # User interface
 │   │   └── __init__.py        # Package initializer
 │   ├── main.py                # Original entry point

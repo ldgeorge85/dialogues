@@ -1,0 +1,13 @@
+{
+  "debate_id": "f233d6ff8921",
+  "topic": "Unknown",
+  "date": "Unknown",
+  "agents": [],
+  "metrics": {
+    "coherence": 0.7,
+    "diversity": 0.0,
+    "depth": 0.0,
+    "consistency": {},
+    "overall_quality": 0.2333333333333333
+  }
+}
