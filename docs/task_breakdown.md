@@ -54,6 +54,15 @@ This document provides a structured, updatable breakdown of all major tasks and 
 
 ### 2. Judging Phase & Quorum Logic [In Progress]
 
+#### [2025-06] Closing Statement Phase (New)
+- **Description:** After the rebuttal phase and before summary, each agent now generates a "closing statement". This phase allows agents to respond to all rebuttals against them, restate their worldview, and summarize their final position.
+- **Inputs:** Agent worldview (from definition), opening statement, all rebuttals received.
+- **How it works:** Each agent receives a prompt constructed from their worldview, opening, and all rebuttals against them. The agent is instructed to provide a closing response addressing the main challenges raised.
+- **Parallelism:** This phase is parallelized and can be configured with `PARALLEL_AGENTS_CLOSING` (or falls back to global parallelism config).
+- **Acceptance Criteria:** Each agent's closing is included in the transcript and available to the summarizer and judges.
+- **References:** See `orchestrator_dynamic.py` for implementation details.
+
+
 #### [2025-06] Per-Phase Parallelism Control
 - **Description:** The system now supports configuring the maximum number of parallel prompts separately for each debate phase (opening, rebuttal, summary, judging).
 - **How to Configure:**

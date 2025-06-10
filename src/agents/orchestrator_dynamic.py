@@ -134,6 +134,45 @@ class OrchestratorAgent:
         for _, _, logs in rebuttal_results:
             transcript.extend(logs)
 
+        # --- Closing Statement Phase (parallelized) ---
+        # Each agent receives their worldview, opening, and all rebuttals against them, and generates a closing statement.
+        def get_closing(agent_opening):
+            from .llm_utils import call_openai
+            agent, opening = agent_opening
+            agent_rebuttals = rebuttals[agent.name]
+            rebuttals_against = []
+            for other_agent, rebuttal_list in rebuttals.items():
+                for r in rebuttal_list:
+                    if r["target"] == agent.name:
+                        rebuttals_against.append({"from": other_agent, "text": r["text"]})
+            # Compose worldview string (from agent definition)
+            worldview = getattr(agent, "worldview", None)
+            if worldview is None and hasattr(agent, "archetype"):
+                worldview = f"Archetype: {agent.archetype}"
+            closing_prompt = (
+                "You are to provide a closing response to the debate. "
+                "Consider your worldview, your opening statement, and the rebuttals you received. "
+                "Summarize your final position and address the main challenges raised against you.\n\n"
+                f"Worldview: {worldview}\n"
+                f"Opening Statement: {opening}\n"
+                f"Rebuttals Against You: {'; '.join([r['text'] for r in rebuttals_against])}"
+            )
+            # Use the agent's critique_prompt for closing, or fallback to analysis_prompt
+            prompt_to_use = getattr(agent, "closing_prompt", None) or getattr(agent, "critique_prompt", None) or getattr(agent, "analysis_prompt", None)
+            result = call_openai(prompt_to_use, closing_prompt, return_usage=True)
+            closing = result['response']
+            usage = result.get('usage', {})
+            token_usage["closing"].append(usage)
+            print(f"{agent.name} Closing: {closing}")
+            if usage:
+                print(f"  [Tokens: prompt={usage.get('prompt_tokens', 0)}, completion={usage.get('completion_tokens', 0)}, total={usage.get('total_tokens', 0)}]")
+            return agent.name, closing, {"phase": "closing", "agent": agent.name, "text": closing, "token_usage": usage}
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=get_phase_parallel("closing", max_parallel)) as executor:
+            closing_results = list(executor.map(get_closing, opening_statements))
+        agent_closings = {name: closing for name, closing, _ in closing_results}
+        transcript.extend([log for _, _, log in closing_results])
+
         # --- Summarization Phase (parallelized) ---
         project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         summarizer_definitions_dir = os.path.join(project_root, "summarizer_definitions")
@@ -152,6 +191,7 @@ class OrchestratorAgent:
                 f"Opening Statement: {opening}\n"
                 f"Rebuttals made: {'; '.join([r['text'] for r in agent_rebuttals])}\n"
                 f"Rebuttals received: {'; '.join([r['text'] for r in rebuttals_against])}"
+                f"\nClosing Statement: {agent_closings.get(agent.name, '')}"
             )
             result = call_openai(summarizer_prompt, summarization_input, return_usage=True)
             summary = result['response']
@@ -163,8 +203,7 @@ class OrchestratorAgent:
             return agent.name, summary, {"phase": "summary", "agent": agent.name, "text": summary, "token_usage": usage}
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=get_phase_parallel("summary", max_parallel)) as executor:
-            summary_results = list(executor.map(get_summary, opening_statements)) # Summary phase parallelism
-
+            summary_results = list(executor.map(get_summary, opening_statements))
         agent_summaries = {name: summary for name, summary, _ in summary_results}
         transcript.extend([log for _, _, log in summary_results])
 
