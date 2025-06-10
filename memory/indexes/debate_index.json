@@ -1,0 +1,27 @@
+[
+  {
+    "debate_id": "debate_20250609_014811",
+    "timestamp": "20250609_014811",
+    "prompt": "What is the nature of consciousness?",
+    "topics": [
+      "consciousness?",
+      "nature",
+      "what"
+    ],
+    "agent_count": 6,
+    "file_path": "/app/memory/debates/debate_20250609_014811.json"
+  },
+  {
+    "debate_id": "debate_20250609_020108",
+    "timestamp": "20250609_020108",
+    "prompt": "How should we understand the mind-body problem?",
+    "topics": [
+      "mind-body",
+      "problem?",
+      "should",
+      "understand"
+    ],
+    "agent_count": 6,
+    "file_path": "/app/memory/debates/debate_20250609_020108.json"
+  }
+]

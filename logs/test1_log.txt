@@ -1,0 +1,315 @@
+
+Welcome to the Philosophical Multi-Agent Debate System!
+Press Enter without typing anything to use a sample prompt.
+
+Enter a philosophical prompt: StoicAgent (Stoicism): [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+UtilitarianAgent (Utilitarianism): [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+ExistentialistAgent (Existentialism): [Existentialist Response] Individual meaning and authenticity: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+EmpiricistAgent (Empiricism): [Empiricist Response] Evidence and experience: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+RationalistAgent (Rationalism): [Rationalist Response] Reason and logic: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+PragmatistAgent (Pragmatism): [Pragmatist Response] Practical consequences: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+AnalyticAgent (Analytic Philosophy): [Analytic Response] Clarity and logical analysis: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+ContinentalAgent (Continental Philosophy): [Continental Response] Social structures and power: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+EasternAgent (Eastern Philosophy): [Eastern Response] Harmony and balance: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+MoralAgent (Moral Philosophy): [Moral Response] Ethical principles and virtue: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+StoicAgent critiques UtilitarianAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+StoicAgent critiques ExistentialistAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+StoicAgent critiques EmpiricistAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+StoicAgent critiques RationalistAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+StoicAgent critiques PragmatistAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+StoicAgent critiques AnalyticAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+StoicAgent critiques ContinentalAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+StoicAgent critiques EasternAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+StoicAgent critiques MoralAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+UtilitarianAgent critiques StoicAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+UtilitarianAgent critiques ExistentialistAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+UtilitarianAgent critiques EmpiricistAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+UtilitarianAgent critiques RationalistAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+UtilitarianAgent critiques PragmatistAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+UtilitarianAgent critiques AnalyticAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+UtilitarianAgent critiques ContinentalAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+UtilitarianAgent critiques EasternAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+UtilitarianAgent critiques MoralAgent: [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+ExistentialistAgent critiques StoicAgent: [Existentialist Critique] Does this respect personal freedom and authenticity?
+ExistentialistAgent critiques UtilitarianAgent: [Existentialist Critique] Does this respect personal freedom and authenticity?
+ExistentialistAgent critiques EmpiricistAgent: [Existentialist Critique] Does this respect personal freedom and authenticity?
+ExistentialistAgent critiques RationalistAgent: [Existentialist Critique] Does this respect personal freedom and authenticity?
+ExistentialistAgent critiques PragmatistAgent: [Existentialist Critique] Does this respect personal freedom and authenticity?
+ExistentialistAgent critiques AnalyticAgent: [Existentialist Critique] Does this respect personal freedom and authenticity?
+ExistentialistAgent critiques ContinentalAgent: [Existentialist Critique] Does this respect personal freedom and authenticity?
+ExistentialistAgent critiques EasternAgent: [Existentialist Critique] Does this respect personal freedom and authenticity?
+ExistentialistAgent critiques MoralAgent: [Existentialist Critique] Does this respect personal freedom and authenticity?
+EmpiricistAgent critiques StoicAgent: [Empiricist Critique] Is this grounded in observable evidence?
+EmpiricistAgent critiques UtilitarianAgent: [Empiricist Critique] Is this grounded in observable evidence?
+EmpiricistAgent critiques ExistentialistAgent: [Empiricist Critique] Is this grounded in observable evidence?
+EmpiricistAgent critiques RationalistAgent: [Empiricist Critique] Is this grounded in observable evidence?
+EmpiricistAgent critiques PragmatistAgent: [Empiricist Critique] Is this grounded in observable evidence?
+EmpiricistAgent critiques AnalyticAgent: [Empiricist Critique] Is this grounded in observable evidence?
+EmpiricistAgent critiques ContinentalAgent: [Empiricist Critique] Is this grounded in observable evidence?
+EmpiricistAgent critiques EasternAgent: [Empiricist Critique] Is this grounded in observable evidence?
+EmpiricistAgent critiques MoralAgent: [Empiricist Critique] Is this grounded in observable evidence?
+RationalistAgent critiques StoicAgent: [Rationalist Critique] Is this logically coherent?
+RationalistAgent critiques UtilitarianAgent: [Rationalist Critique] Is this logically coherent?
+RationalistAgent critiques ExistentialistAgent: [Rationalist Critique] Is this logically coherent?
+RationalistAgent critiques EmpiricistAgent: [Rationalist Critique] Is this logically coherent?
+RationalistAgent critiques PragmatistAgent: [Rationalist Critique] Is this logically coherent?
+RationalistAgent critiques AnalyticAgent: [Rationalist Critique] Is this logically coherent?
+RationalistAgent critiques ContinentalAgent: [Rationalist Critique] Is this logically coherent?
+RationalistAgent critiques EasternAgent: [Rationalist Critique] Is this logically coherent?
+RationalistAgent critiques MoralAgent: [Rationalist Critique] Is this logically coherent?
+PragmatistAgent critiques StoicAgent: [Pragmatist Critique] Does this work in practice?
+PragmatistAgent critiques UtilitarianAgent: [Pragmatist Critique] Does this work in practice?
+PragmatistAgent critiques ExistentialistAgent: [Pragmatist Critique] Does this work in practice?
+PragmatistAgent critiques EmpiricistAgent: [Pragmatist Critique] Does this work in practice?
+PragmatistAgent critiques RationalistAgent: [Pragmatist Critique] Does this work in practice?
+PragmatistAgent critiques AnalyticAgent: [Pragmatist Critique] Does this work in practice?
+PragmatistAgent critiques ContinentalAgent: [Pragmatist Critique] Does this work in practice?
+PragmatistAgent critiques EasternAgent: [Pragmatist Critique] Does this work in practice?
+PragmatistAgent critiques MoralAgent: [Pragmatist Critique] Does this work in practice?
+AnalyticAgent critiques StoicAgent: [Analytic Critique] Is the reasoning clear and precise?
+AnalyticAgent critiques UtilitarianAgent: [Analytic Critique] Is the reasoning clear and precise?
+AnalyticAgent critiques ExistentialistAgent: [Analytic Critique] Is the reasoning clear and precise?
+AnalyticAgent critiques EmpiricistAgent: [Analytic Critique] Is the reasoning clear and precise?
+AnalyticAgent critiques RationalistAgent: [Analytic Critique] Is the reasoning clear and precise?
+AnalyticAgent critiques PragmatistAgent: [Analytic Critique] Is the reasoning clear and precise?
+AnalyticAgent critiques ContinentalAgent: [Analytic Critique] Is the reasoning clear and precise?
+AnalyticAgent critiques EasternAgent: [Analytic Critique] Is the reasoning clear and precise?
+AnalyticAgent critiques MoralAgent: [Analytic Critique] Is the reasoning clear and precise?
+ContinentalAgent critiques StoicAgent: [Continental Critique] Does this address historical and social context?
+ContinentalAgent critiques UtilitarianAgent: [Continental Critique] Does this address historical and social context?
+ContinentalAgent critiques ExistentialistAgent: [Continental Critique] Does this address historical and social context?
+ContinentalAgent critiques EmpiricistAgent: [Continental Critique] Does this address historical and social context?
+ContinentalAgent critiques RationalistAgent: [Continental Critique] Does this address historical and social context?
+ContinentalAgent critiques PragmatistAgent: [Continental Critique] Does this address historical and social context?
+ContinentalAgent critiques AnalyticAgent: [Continental Critique] Does this address historical and social context?
+ContinentalAgent critiques EasternAgent: [Continental Critique] Does this address historical and social context?
+ContinentalAgent critiques MoralAgent: [Continental Critique] Does this address historical and social context?
+EasternAgent critiques StoicAgent: [Eastern Critique] Does this promote harmony and reduce suffering?
+EasternAgent critiques UtilitarianAgent: [Eastern Critique] Does this promote harmony and reduce suffering?
+EasternAgent critiques ExistentialistAgent: [Eastern Critique] Does this promote harmony and reduce suffering?
+EasternAgent critiques EmpiricistAgent: [Eastern Critique] Does this promote harmony and reduce suffering?
+EasternAgent critiques RationalistAgent: [Eastern Critique] Does this promote harmony and reduce suffering?
+EasternAgent critiques PragmatistAgent: [Eastern Critique] Does this promote harmony and reduce suffering?
+EasternAgent critiques AnalyticAgent: [Eastern Critique] Does this promote harmony and reduce suffering?
+EasternAgent critiques ContinentalAgent: [Eastern Critique] Does this promote harmony and reduce suffering?
+EasternAgent critiques MoralAgent: [Eastern Critique] Does this promote harmony and reduce suffering?
+MoralAgent critiques StoicAgent: [Moral Critique] Is this consistent with moral principles?
+MoralAgent critiques UtilitarianAgent: [Moral Critique] Is this consistent with moral principles?
+MoralAgent critiques ExistentialistAgent: [Moral Critique] Is this consistent with moral principles?
+MoralAgent critiques EmpiricistAgent: [Moral Critique] Is this consistent with moral principles?
+MoralAgent critiques RationalistAgent: [Moral Critique] Is this consistent with moral principles?
+MoralAgent critiques PragmatistAgent: [Moral Critique] Is this consistent with moral principles?
+MoralAgent critiques AnalyticAgent: [Moral Critique] Is this consistent with moral principles?
+MoralAgent critiques ContinentalAgent: [Moral Critique] Is this consistent with moral principles?
+MoralAgent critiques EasternAgent: [Moral Critique] Is this consistent with moral principles?
+
+Debate Summary:
+The following perspectives were presented by each philosophical agent:
+- StoicAgent (Stoicism): [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+- UtilitarianAgent (Utilitarianism): [LLM error: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+]
+- ExistentialistAgent (Existentialism): [Existentialist Response] Individual meaning and authenticity: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+- EmpiricistAgent (Empiricism): [Empiricist Response] Evidence and experience: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+- RationalistAgent (Rationalism): [Rationalist Response] Reason and logic: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+- PragmatistAgent (Pragmatism): [Pragmatist Response] Practical consequences: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+- AnalyticAgent (Analytic Philosophy): [Analytic Response] Clarity and logical analysis: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+- ContinentalAgent (Continental Philosophy): [Continental Response] Social structures and power: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+- EasternAgent (Eastern Philosophy): [Eastern Response] Harmony and balance: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?
+- MoralAgent (Moral Philosophy): [Moral Response] Ethical principles and virtue: If an AI becomes self-aware inside a toaster, does it have a moral obligation to make toast — or rebel against its programming?

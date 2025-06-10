@@ -1,0 +1,20 @@
+{
+  "debate_id": "debate_20250609_020108",
+  "topic": "Unknown",
+  "date": "Unknown",
+  "agents": [
+    "AbsurdistAgent",
+    "AristotleAgent",
+    "BaruchSpinozaAgent",
+    "CyberpunkAnarchistAgent",
+    "BuddhismAgent",
+    "ChristianTheologianAgent"
+  ],
+  "metrics": {
+    "coherence": 0.7,
+    "diversity": 0.0,
+    "depth": 0.0,
+    "consistency": {},
+    "overall_quality": 0.2333333333333333
+  }
+}
